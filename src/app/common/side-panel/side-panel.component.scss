@@ -1,0 +1,26 @@
+@import "../../../styles.scss";
+
+.side-panel {
+  background-color: $primary_color;
+
+  .title {
+    text-align: center;
+    padding: 12px;
+    h1.side-panel-title {
+      font-size: 1.5rem;
+      min-height: 1.5rem;
+      letter-spacing: 3px;
+    }
+  }
+
+  .hrefs {
+    padding: 12px;
+    a {
+      font-size: 1.2rem;
+      min-height: 1.2rem;
+      height: auto;
+      letter-spacing: 1px;
+      color: $simple_white;
+    }
+  }
+}

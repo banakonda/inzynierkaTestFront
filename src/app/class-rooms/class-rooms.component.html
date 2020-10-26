@@ -1,0 +1,25 @@
+<div class="page-content-height">
+  <div class="content">
+    <h1 class="page-title">Sale</h1>
+    <div class="row">
+      <app-selected-type-buttons [buttons]="buttons" [(selected)]="selected"></app-selected-type-buttons>
+      <span class="spaced-t-l material-icons clickable" (click)="refreshList()">refresh</span>
+    </div>
+    <div class="spaced-l-l spaced-t" *ngIf="listItems$ | async as listItems">
+      <div *ngFor="let item of listItems">
+        <div *ngIf="selected === item.studyFieldID" class="center-row list-row w-60">
+          <span class="spaced-l-s weight-500">{{ item.name }}</span>
+
+          <div class="space"></div>
+          <span class="material-icons clickable red-color">delete_forever</span>
+          <span class="spaced-l-s primary-color clickable weight-500" hidden>Edytuj</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="buttons">
+    <a class="button" mat-raised-button color="primary" routerLink="/create-class-rooms">Dodaj</a>
+  </div>
+</div>

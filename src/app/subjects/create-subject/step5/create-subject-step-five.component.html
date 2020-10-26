@@ -1,0 +1,8 @@
+<h3 class="form-request">Czy przedmiot jest obieralny?</h3>
+<mat-radio-group class="column spaced-t" [(ngModel)]="newSubject.eligibility">
+  <mat-radio-button color="primary" class="spaced-t-s" [value]="true">Tak</mat-radio-button>
+  <mat-radio-button color="primary" class="spaced-t-l" [value]="false">Nie</mat-radio-button>
+</mat-radio-group>
+
+<!-- TODO: Should be precise how many ppl can take part in lessons. -->
+<h3 class="form-request" hidden>Czy przedmiot jest obieralny?</h3>

@@ -1,0 +1,9 @@
+<div class="buttons">
+
+  <a class="link-button" [routerLink]="cancelLink">Anuluj</a>
+  <a class="link-button" *ngIf="step > 1" (click)="setStepValue(step - 1)">Wstecz</a>
+
+  <button [disabled]="f.invalid" type="submit" mat-raised-button
+    color="primary">{{step === lastStep ? "Stwórz" : "Dalej"}}</button>
+
+</div>

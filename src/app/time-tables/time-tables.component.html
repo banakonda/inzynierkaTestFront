@@ -1,0 +1,16 @@
+<div class="content">
+
+    <h1 class="page-title">Plany zajęć</h1>
+    <app-selected-type-buttons [buttons]="buttons" [(selected)]="selected"></app-selected-type-buttons>
+
+    <div class="spaced-l-l spaced-t">
+        {{ selected }}
+    </div>
+
+
+
+</div>
+
+<div class="buttons">
+    <button mat-raised-button color="primary">Dodaj</button>
+</div>
