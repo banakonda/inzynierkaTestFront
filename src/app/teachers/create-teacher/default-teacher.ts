@@ -2,7 +2,7 @@ import { Availability } from 'src/app/data/models/Availability';
 import { Teacher } from 'src/app/data/models/Teacher';
 
 export const newTeacher: Teacher = {
-  titleID: 1,
+  titleID: '',
   name: '',
   studyField: 1,
   availability: {

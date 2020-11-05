@@ -1,7 +1,7 @@
 import { WeekAvailability } from './Availability';
 
 export interface Teacher {
-  titleID: number;
+  titleID: string;
   name: string;
   studyField: number;
   availability: WeekAvailability;

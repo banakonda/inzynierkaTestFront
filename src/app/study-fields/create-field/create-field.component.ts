@@ -23,7 +23,7 @@ export class CreateFieldComponent {
   createStudyField(): void {
     let error = 0;
     try {
-      this.sfs.createStudyField(this.newStudyField);
+      this.sfs.createStudyField(this.newStudyField).subscribe();
     } catch {
       error = 1;
     } finally {

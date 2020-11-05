@@ -7,5 +7,5 @@ export interface ClassRoom {
 }
 
 export interface ClassRoomAPI extends ClassRoom {
-  id: number;
+  id: string;
 }

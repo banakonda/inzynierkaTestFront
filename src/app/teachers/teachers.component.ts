@@ -25,7 +25,7 @@ export class TeachersComponent implements OnInit {
 
   ngOnInit(): void {
     this.sfs.getStudyFields().subscribe(q => this.buttons = q);
-    this.selected = this.buttons[0].id;
+    //this.selected = this.buttons[0].id;
     this.titleService.getTitles().subscribe(t => this.titles = t);
     this.refreshList();
   }
@@ -36,6 +36,11 @@ export class TeachersComponent implements OnInit {
 
   refreshList(): void {
     this.listItems$ = this.ts.getTeachers();
+  }
+
+  deleteTeacher(id: number): void {
+    this.ts.deleteTeacher(id).subscribe();
+    this.refreshList();
   }
 
 }

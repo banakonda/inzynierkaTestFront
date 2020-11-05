@@ -7,11 +7,12 @@
     </div>
     <div class="spaced-l-l spaced-t" *ngIf="listItems$ | async as listItems">
       <div *ngFor="let item of listItems">
-        <div *ngIf="selected === item.studyFieldID" class="center-row list-row w-60">
+        <!-- <div *ngIf="selected === item.studyFieldID" class="center-row list-row w-60"> -->
+        <div class="center-row list-row w-60">
           <span class="spaced-l-s weight-500">{{ item.name }}</span>
 
           <div class="space"></div>
-          <span class="material-icons clickable red-color">delete_forever</span>
+          <span class="material-icons clickable red-color" (click)="deleteClassRooms(item.id)">delete_forever</span>
           <span class="spaced-l-s primary-color clickable weight-500" hidden>Edytuj</span>
         </div>
       </div>

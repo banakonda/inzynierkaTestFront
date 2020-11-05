@@ -6,10 +6,11 @@
       <span class="spaced-t-l material-icons clickable" (click)="refreshList()">refresh</span>
     </div>
     <div class="spaced-l-l spaced-t" *ngIf="listItems$ | async as listItems">
+    <div class="spaced-l-l spaced-t">
       <div *ngFor="let item of listItems">
-        <div *ngIf="selected === item.departmentID">
+        <!-- <div *ngIf="selected === item.departmentID"> -->
           <div class="center-row list-row w-60">
-            <span class="spaced-l-s weight-500">{{ item.name }} </span>
+            <span class="spaced-l-s weight-500">{{ test }} {{ item.departmentID }}</span>
             <span class="light-color spaced-l">({{item.degree}} stopień, {{item.numberOfSemesters}} semestrów)</span>
 
             <div class="space"></div>

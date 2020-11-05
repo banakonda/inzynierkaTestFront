@@ -25,7 +25,7 @@ export class CreateTeacherComponent {
     let error = 0;
     try {
       // TODO: Delete (evenWeeks && oddWeeks) || allWeeks
-      this.ts.createTeacher(this.newTeacher);
+      this.ts.createTeacher(this.newTeacher).subscribe();
     } catch {
       error = 1;
     } finally {

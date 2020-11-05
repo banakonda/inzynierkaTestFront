@@ -10,10 +10,13 @@ import { StudyFieldsService } from './study-fields.service';
   templateUrl: './study-fields.component.html',
 })
 export class StudyFieldsComponent implements OnInit {
-  buttons: DepartmentAPI[] = [];
-  selected: any;
 
-  listItems$: Observable<StudyFieldAPI[]>;
+  buttons: DepartmentAPI[] = [];
+  selected: string;
+  test: any;
+
+  listItems$: Observable<any[]>;
+  studyFields: StudyFieldAPI[]; 
 
   constructor(
     private studyFieldService: StudyFieldsService,
@@ -22,12 +25,13 @@ export class StudyFieldsComponent implements OnInit {
 
   ngOnInit(): void {
     this.departmentService.getDepartments().subscribe(departments => this.buttons = departments);
-    this.selected = this.buttons[0].id;
+    //this.selected = this.buttons[0].id;
     this.refreshList();
   }
 
   deleteStudyField(id: number): void {
-    this.studyFieldService.deleteStudyField(id);
+    this.studyFieldService.deleteStudyField(id).subscribe();
+    this.refreshList();
   }
 
   refreshList(): void {
